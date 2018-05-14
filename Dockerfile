@@ -47,3 +47,5 @@ RUN mv /usr/bin/puppet /usr/bin/puppet.orig
 RUN mkdir /vol
 
 COPY puppet /usr/bin/puppet
+
+RUN chmod +x /usr/bin/puppet
