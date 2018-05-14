@@ -35,3 +35,15 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update
 # puppet packages
 #
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y puppet puppet-common puppet-el puppet-testsuite puppetmaster puppetmaster-common vim-puppet
+
+RUN mkdir -p /usr/local/src
+
+RUN /bin/bash -c 'cd /usr/local/src; git clone https://github.com/jordiprats/puppet-module-skeleton'
+
+RUN /bin/bash /usr/local/src/puppet-module-skeleton/install.sh
+
+RUN mv /usr/bin/puppet /usr/bin/puppet.orig
+
+RUN mkdir /vol
+
+COPY puppet /usr/bin/puppet
