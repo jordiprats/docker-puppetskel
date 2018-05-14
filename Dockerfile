@@ -42,7 +42,9 @@ RUN /bin/bash -c 'cd /usr/local/src; git clone https://github.com/jordiprats/pup
 
 RUN /bin/bash /usr/local/src/puppet-module-skeleton/install.sh
 
-RUN mv /usr/bin/puppet /usr/bin/puppet.orig
+RUN mkdir -p /opt/orig
+
+RUN mv /usr/bin/puppet /opt/orig/puppet
 
 RUN mkdir /vol
 

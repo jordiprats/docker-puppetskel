@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd /vol
-/usr/bin/puppet.orig $@
+/opt/orig/puppet $@
