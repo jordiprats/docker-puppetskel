@@ -1,5 +1,12 @@
 # docker-puppetskel
 
+## building puppetskel
+
+```
+$ docker build -t eyp/puppetskel .
+```
+
+## running puppetskel
 ```
 jprats@croscat:~/git$ docker run -i -v /home/jprats/git:/vol -t eyp/puppetskel puppet module generate --skip-interview eyp-elasticsearch
 Warning: Setting templatedir is deprecated. See http://links.puppetlabs.com/env-settings-deprecations
